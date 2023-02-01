@@ -1,0 +1,32 @@
+.boxname{
+  font-family: 'Itim', cursive;
+  appearance: none;
+  color: #3c4043;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.cardname1{
+  font-family: 'Itim', cursive;
+  appearance: none;
+  color: rgb(50, 224, 236) ;
+  font-size: 80px;
+  font-weight: 500;
+}
+
+.cardname2{
+  font-family: 'Itim', cursive;
+  appearance: none;
+  color: #fa7c73 ;
+  font-size: 80px;
+  font-weight: 500;
+}
+
+.cardname3{
+  font-family: 'Itim', cursive;
+  appearance: none;
+  color: rgb(255, 48, 48) ;
+  font-size: 80px;
+  font-weight: 500;
+}
+

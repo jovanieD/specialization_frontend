@@ -1,0 +1,12 @@
+.card-body{
+  border-radius: 50px;
+}
+
+.register {
+  font-family: 'Fascinate Inline', cursive;
+  font-size: 30pt;
+}
+
+.register-page{
+  margin-top: 60px;
+}

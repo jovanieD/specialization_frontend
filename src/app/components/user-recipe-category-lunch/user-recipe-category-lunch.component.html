@@ -1,0 +1,42 @@
+
+<app-user-navbar></app-user-navbar>
+<main class="container ">
+  <div class="row g-5 mt-5">
+    <div class="col-md-8 mt-5">
+      <div class="row g-0 bg-body-secondary position-sticky shadow bg-body-tertiary rounded">
+          <h1>Lunch</h1>
+      </div>
+
+      <div *ngFor="let recipefree of recipesCategory" class="row g-0 bg-body-secondary position-relative shadow bg-body-tertiary rounded">
+        <div class="col-md-6 mb-md-0 p-md-4">
+          <img src="{{imagePath}}{{recipefree.img_url}}" class="w-100" alt="...">
+        </div>
+
+        <div class="col-md-6 p-4 ps-md-0 h-100">
+          <h5 class="mt-0 text-capitalize">{{recipefree.name}}</h5>
+          <p>{{recipefree.description}}</p>
+          <div class="position-absolute">
+            <button class="button-16 fixed-bottom">Veiw details >></button>
+          </div>
+        </div>
+      </div>
+      <!-- <h3 class="text-center p-4" *ngIf="!(recipesCategory[0])">No Recipes yet!</h3> -->
+    </div> <!-- this is the in part of the cards  -->
+
+<!-- Don't anything in this part  -->
+    <div class="col-md-4  mt-5">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 bg-light rounded text-justify">
+          <h4 class="fst-italic">Ingredients</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque praesentium, asperiores, nostrum atque quod perferendis cum a est omnis eveniet voluptatum consectetur quos quia et itaque, distinctio velit! Suscipit, officia!</p>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Procedure</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim laudantium voluptate porro magni fugit fugiat nobis molestias ab temporibus, animi possimus, nihil asperiores. Nulla temporibus perspiciatis quae quisquam beatae odio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>

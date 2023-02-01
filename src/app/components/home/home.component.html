@@ -1,0 +1,61 @@
+<app-navbar></app-navbar>
+<app-carousel></app-carousel>
+<app-home-overview></app-home-overview>
+
+<div class="album py-5 bg-light">
+<div class="container mx-auto row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+    <div *ngFor="let recipe of recipesSale | paginate: { itemsPerPage: 8, currentPage: p }" class="h-"  style="height: 380px;">
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <img class="bd-placeholder-img card-img-top" width="100%" height="200" src="{{imagePath}}{{recipe.img_url}}" >
+          <div class="card-body text-truncate">
+            <h4 class="text-capitalize text-truncate">{{recipe.name}}</h4>
+            <h5><span>&#8369;</span>{{recipe.price}}</h5>
+            <p class="card-text">{{recipe.description}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="button-16" (click)="mouseclickSale()" >View</button>
+              </div>
+              <div class="bookmark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8V1z"/>
+                <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+              </svg></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div *ngFor="let recipefree of recipesFree | paginate: { itemsPerPage: 8, currentPage: p }" style="height: 380px;">
+        <div class="col mh-380" >
+          <div class="card shadow-sm h-100">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="200" src="{{imagePath}}{{recipefree.img_url}}" >
+            <div class="card-body text-truncate">
+              <h4 class="text-capitalize text-truncate">{{recipefree.name}}</h4>
+              <p class="card-text">{{recipefree.description}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="button-16" (click)="mouseclickFree()">View</button>
+                </div>
+                <button class="bookmark" (click)="addbookmark()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8V1z"/>
+                  <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                  <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                </svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div>
+  <pagination-controls class="ngx" (pageChange)="p = $event"></pagination-controls>
+</div>
+</div>
+
+

@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand fixed-top navbar-light bg-light">
+  <div class="container">
+  <img src="https://www.pngitem.com/pimgs/m/87-877725_recipes-png-transparent-png.png" width="80px" alt="">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+    <li class="nav">
+      <a  class="nav-link px-2 text-black" style="font-family: 'Itim', cursive; font-size: larger; color: black;"  routerLink="/home" >Home</a></li>
+              <li class="nav"><div class="dropdown">
+                <button class="btn catnv text-black dropdown-toggle" style="color: black; font-family: 'Itim', cursive; font-size: larger;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Category
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" routerLink="/breakfast" >Breakfast</a>
+                  <a class="dropdown-item" routerLink="/lunch">Lunch</a>
+                  <a class="dropdown-item" routerLink="/dinner">Dinner</a>
+                </div>
+              </div></li>
+              <li class="nav"><a class="nav-link px-2 text-black" style="font-family: 'Itim', cursive; font-size: larger; color: black;" routerLink="/free">Free</a></li>
+              <li class="nav"><a  class="nav-link px-2 text-black" style="font-family: 'Itim', cursive; font-size: larger; color: black;" routerLink="/sale" >For sale</a></li>
+
+  </ul>
+
+    <li class="nav nav-item dropdown" >
+      <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <label for="user"  class="mr-2">{{user.username}}</label>
+          <img  src="{{imagePath}}{{user.img_url}}" alt="">
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" routerLink="/dashboard">Dashboard</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" (click)="submitLogout()">Logout</a>
+      </div>
+    </li>
+</div>
+</nav>

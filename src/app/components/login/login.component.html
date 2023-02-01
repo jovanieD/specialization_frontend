@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<div class="login-page">
+  <div class="login-box ">
+    <div class="card ">
+      <div class="card-body login-card-body bg-light ">
+        <div class="login-logo">
+          <img src="https://www.pngitem.com/pimgs/m/87-877725_recipes-png-transparent-png.png" width="100px" alt="">
+        </div>
+        <p class="login-box-msg">Sign in to start your session</p>
+        <div>
+          <h1 class="login">Log in</h1>
+        </div>
+        <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+          <div class="input-group mb-4">
+            <input type="email" class="form-control" placeholder="Email" name="email" ngModel>
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-envelope"></span>
+              </div>
+            </div>
+          </div>
+          <div class="input-group mb-4">
+            <input type="password" class="form-control" placeholder="Password" name="password" ngModel>
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-4">
+              <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            </div>
+            <!-- /.col -->
+          </div>
+        </form>
+        <p class="mb-0">
+          <a routerLink="/register" class="text-center">Register a new account</a>
+        </p>
+      </div>
+      <!-- /.login-card-body -->
+    </div>
+  </div>
+  <!-- /.login-box -->
+</div>
